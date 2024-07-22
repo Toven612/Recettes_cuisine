@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créer une nouvelle recette</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Créer une nouvelle recette</h1>
+        <nav>
+            <a href="index.html" class="btn">Accueil</a>
+            <a href="recettes.html" class="btn">Recettes</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="formulaire-recette">
+            <h2>Formulaire de création de recette</h2>
+            <form id="recette-form">
+                <div class="champ">
+                    <label for="titre">Titre de la recette:</label>
+                    <input type="text" id="titre" name="titre" required>
+                </div>
+
+                <div class="champ">
+                    <label for="ingredients">Ingrédients:</label>
+                    <textarea id="ingredients" name="ingredients" rows="5" required></textarea>
+                </div>
+
+                <div class="champ">
+                    <label for="image">Image de la recette:</label>
+                    <input type="file" id="image" name="image" accept="image/*">
+                </div>
+
+                <div class="champ">
+                    <label for="instructions">Instructions:</label>
+                    <textarea id="instructions" name="instructions" rows="10" required></textarea>
+                </div>
+
+                <div class="champ">
+                    <label for="temps-preparation">Temps de préparation:</label>
+                    <input type="number" id="temps-preparation" name="temps-preparation" min="0">
+                </div>
+
+                <div class="champ">
+                    <label for="temps-cuisson">Temps de cuisson:</label>
+                    <input type="number" id="temps-cuisson" name="temps-cuisson" min="0">
+                </div>
+
+                <div class="champ">
+                    <label for="difficulté">Difficulté:</label>
+                    <select id="difficulté" name="difficulté">
+                        <option value="facile">Facile</option>
+                        <option value="moyen">Moyen</option>
+                        <option value="difficile">Difficile</option>
+                    </select>
+                </div>
+
+                <button type="submit">Créer la recette</button>
+            </form>
+        </section>
+    </main>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
